@@ -1,7 +1,9 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  devtool: 'inline-source-map',
   entry: {
     popup: './src/popup.tsx',
     options: './src/options.tsx',
@@ -38,5 +40,10 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: '.', to: '../dist', context: 'public' }],
+    }),
+  ],
   target: 'web',
 };
