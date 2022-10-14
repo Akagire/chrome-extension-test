@@ -5,6 +5,9 @@ const Popup = () => {
   return (
     <>
       <h1>test</h1>
+      <div>
+        <button>Click me</button>
+      </div>
     </>
   );
 };

@@ -21,3 +21,16 @@ touch webpack.config.js
 yarn tsc --init
 # 詳細はファイルを見てください
 ```
+
+#### 3. 開発用と本番用の `webpack.config.js` を用意
+
+詳細は `webpack` フォルダを参照してください
+
+#### 4. `package.json` に `script` 追加
+
+```json
+"script": {
+  "build": "webpack --config webpack/production.js",
+  "watch": "webpack --config webpack/develop.js --watch"
+}
+```

@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 const Options = () => {
   return (
     <>
-      <h1>test</h1>
+      <h1>Options</h1>
     </>
   );
 };
